@@ -1,0 +1,15 @@
+<form id="queryForm">
+<div class="form-group">
+  <label>Login</label>
+  <input type="text" name="name" [(ngModel)]="personne.userName" class="form-control" placeholder="login" required>
+</div>
+<div class="form-group">
+  <label >Mot de passe</label>
+  <input type="password" name="password" [(ngModel)]="personne.pwd" class="form-control" placeholder="mot de passe" required>
+</div>
+<button type="submit" (click)="connexion(personne.userName, personne.pwd)" class="btn btn-outline-primary">Connexion</button>
+</form>
+
+<div *ngIf="!personne.isAuthentified">Votre login et/ou password est erroné, veuillez ressayer.</div>
+<!--div *ngIf="personne.isAuthentified" [routerLink]="['/home']">connecté</div-->
+<div > </div>
